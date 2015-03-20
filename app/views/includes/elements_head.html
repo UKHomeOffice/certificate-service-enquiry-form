@@ -1,0 +1,13 @@
+<link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/public/stylesheets/elements.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="/public/javascripts/jquery.min.js"></script>
+<script src="/public/javascripts/form.storage.js"></script>
+<script>
+$(document).ready(function(){
+  $(".hide-by-default").hide();
+  //write to local storage
+  $('form').storeForm();
+  //play back from local storage
+  $('.playback-container').getForm();
+});
+</script>
