@@ -9,5 +9,37 @@ $(document).ready(function(){
   $('form').storeForm();
   //play back from local storage
   $('.playback-container').getForm();
+  $('body').on('change', 'input', function(){
+
+    var $this = $(this);
+
+    // toggle optional sections
+
+    if ($this.is(':checkbox')){
+
+      var $toggleTarget = $('.optional-section-'+$this.attr('name') + '[data-toggle-value="'+$this.val() + '"]');
+
+      console.log('.optional-section-'+$this.attr('name') + '[data-toggle-value="'+$this.val() + '"]');
+
+      if ($toggleTarget.length){
+
+        $toggleTarget.toggle($this.is(':checked') && $this.val() == $toggleTarget.attr('data-toggle-value'));
+
+      }
+
+    } else if ($this.is(':radio')){
+
+      var $toggleTarget = $('.optional-section-'+$this.attr('name'));
+
+      console.log('.optional-section-'+$this.attr('name') + '[data-toggle-value="'+$this.val() + '"]');
+
+      $toggleTarget.each(function(){
+
+        $(this).toggle($this.val() == $(this).attr('data-toggle-value'));
+
+      });
+    }
+
+  });
 });
 </script>

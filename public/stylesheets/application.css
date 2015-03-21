@@ -1096,3 +1096,8 @@ ul, ol {
     .alpha-tag {
       font-size: 14px;
       line-height: 1.14286; } }
+
+.optional-section {
+  display: none;
+  padding-top: 24px;
+  clear: both; }

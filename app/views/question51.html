@@ -7,11 +7,11 @@
 {{$content}}
 <main id="content" role="main">
 
-  <a href="/hmpo/question41" class="no-back-link">Back</a>    <span class="example-back-link">Question 5 of 6</span>
+  <a href="question41" class="no-back-link">Back</a>    <span class="example-back-link">Question 5 of 6</span>
 
-  <form action="/hmpo/question6" method="get" class="form">
+  <form action="question6" method="get" class="form" name="complaint">
 
-    
+
     <!-- Certificate selection -->
 
     <div class="form-group">
@@ -19,7 +19,7 @@
     </div>
     <div class="form-group">
       <label class="block-label selectable" for="radio-1">
-        <input id="radio-1" type="radio" name="radio-certificate-select" value="service-complaint">
+        <input id="radio-1" type="radio" name="radio-certificate-select" value="service-complaint" data-storage="service-complaint">
         Service complaint
       </label>
 
@@ -31,17 +31,17 @@
         </label>
       </div>
       <div class="form-group">
-        <textarea class="form-control" id="complaint-details"></textarea>
+        <textarea class="form-control" id="complaint-details" name="complaint-details"></textarea>
       </div>
 
       <div class="form-group">
-        <input id="checkbox-1" type="checkbox" value="previous-complaint">
+        <input id="checkbox-1" type="checkbox" value="previous-complaint" name="previous-complaint" data-storage="yes">
           I have made a previous complaint about this order
        </div>
     </div>
 
       <label class="block-label selectable" for="radio-2">
-        <input id="radio-2" type="radio" name="radio-certificate-select" value="certificate-not-received">
+        <input id="radio-2" type="radio" name="radio-certificate-select" value="certificate-not-received" data-storage="certificate-not-received">
         Certificate not received
       </label>
 
@@ -53,17 +53,17 @@
         </label>
       </div>
       <div class="form-group">
-        <textarea class="form-control" id="complaint-details"></textarea>
+        <textarea class="form-control" id="complaint-details" name="complaint-details"></textarea>
       </div>
 
       <div class="form-group">
-          <input id="checkbox-1" type="checkbox" value="previous-contact">
+          <input id="checkbox-1" type="checkbox" value="previous-contact" name="previous-contact" data-storage="yes">
           I have previously been in contact about this
       </div>
     </div>
 
       <label class="block-label selectable" for="radio-3">
-        <input id="radio-3" type="radio" name="radio-certificate-select" value="wrong-certificate-received">
+        <input id="radio-3" type="radio" name="radio-certificate-select" value="wrong-certificate-received" data-storage="wrong-certificate-received">
         Wrong certificate received
       </label>
 
@@ -93,7 +93,7 @@
     </div>
 
       <label class="block-label selectable" for="radio-4">
-        <input id="radio-4" type="radio" name="radio-certificate-select" value="quality-issue">
+        <input id="radio-4" type="radio" name="radio-certificate-select" value="quality-issue" data-storage="quality-issue">
         Quality issue
       </label>
 
@@ -115,7 +115,7 @@
     </div>
 
       <label class="block-label selectable" for="radio-5">
-        <input id="radio-5" type="radio" name="radio-certificate-select" value="compliment">
+        <input id="radio-5" type="radio" name="radio-certificate-select" value="compliment" data-storage="compliment">
         Compliment
       </label>
 
@@ -132,7 +132,7 @@
     </div>
 
       <label class="block-label selectable" for="radio-6">
-        <input id="radio-6" type="radio" name="radio-certificate-select" value="refund-query">
+        <input id="radio-6" type="radio" name="radio-certificate-select" value="refund-query" data-storage="refund-query">
         Refund query
       </label>
 
@@ -175,7 +175,7 @@
     </div>
 
       <label class="block-label selectable" for="radio-6">
-        <input id="radio-6" type="radio" name="radio-certificate-select" value="other">
+        <input id="radio-6" type="radio" name="radio-certificate-select" value="other" data-storage="other">
         Other
       </label>
     </div>
