@@ -10,14 +10,13 @@ module.exports = {
     app.get('/examples/hello-world', function (req, res) {
       res.render('examples/hello-world', {'message' : 'Hello world'});
     });
-
     app.get('/examples/inheritance', function (req, res) {
       res.render('examples/inheritance/page-level', {'message' : 'Hello world'});
     });
 
     app.get('/examples/alpha', function (req, res) {
-      res.render('examples/alpha/alpha', {'assetPath' : assetPath });    
+      res.render('examples/alpha/alpha', {'assetPath' : assetPath });
     });
-
+    
   }
 };
