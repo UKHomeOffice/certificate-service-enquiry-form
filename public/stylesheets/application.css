@@ -649,7 +649,7 @@ fieldset {
   margin: -2px 5px 0 0; }
 
 @media (max-width: 640px) {
-  .form .button {
+  .form .button, .form .button-secondary {
     width: 100%; } }
 
 @-ms-viewport {
@@ -806,7 +806,7 @@ table th, table td {
 table th {
   font-weight: 700; }
 
-.button {
+.button, .button-secondary {
   background-color: #00823b;
   position: relative;
   display: -moz-inline-stack;
@@ -829,30 +829,30 @@ table th {
   margin: 0 15px 15px 0;
   padding: 0.52632em 0.78947em 0.26316em 0.78947em;
   vertical-align: top; }
-  .button:visited {
+  .button:visited, .button-secondary:visited {
     background-color: #00823b; }
-  .button:hover, .button:focus {
+  .button:hover, .button-secondary:hover, .button:focus, .button-secondary:focus {
     background-color: #00692f; }
-  .button:active {
+  .button:active, .button-secondary:active {
     top: 2px;
     -webkit-box-shadow: 0 0 0 #00823b;
     -moz-box-shadow: 0 0 0 #00823b;
     box-shadow: 0 0 0 #00823b; }
-  .button.disabled, .button[disabled="disabled"], .button[disabled] {
+  .button.disabled, .disabled.button-secondary, .button[disabled="disabled"], [disabled="disabled"].button-secondary, .button[disabled], [disabled].button-secondary {
     zoom: 1;
     filter: alpha(opacity=50);
     opacity: 0.5; }
-    .button.disabled:hover, .button[disabled="disabled"]:hover, .button[disabled]:hover {
+    .button.disabled:hover, .disabled.button-secondary:hover, .button[disabled="disabled"]:hover, [disabled="disabled"].button-secondary:hover, .button[disabled]:hover, [disabled].button-secondary:hover {
       cursor: default;
       background-color: #00823b; }
-    .button.disabled:active, .button[disabled="disabled"]:active, .button[disabled]:active {
+    .button.disabled:active, .disabled.button-secondary:active, .button[disabled="disabled"]:active, [disabled="disabled"].button-secondary:active, .button[disabled]:active, [disabled].button-secondary:active {
       top: 0;
       -webkit-box-shadow: 0 2px 0 #003518;
       -moz-box-shadow: 0 2px 0 #003518;
       box-shadow: 0 2px 0 #003518; }
-  .button:link, .button:hover, .button:focus, .button:visited {
+  .button:link, .button-secondary:link, .button:hover, .button-secondary:hover, .button:focus, .button-secondary:focus, .button:visited, .button-secondary:visited {
     color: #fff; }
-  .button:before {
+  .button:before, .button-secondary:before {
     content: "";
     height: 110%;
     width: 100%;
@@ -861,22 +861,22 @@ table th {
     position: absolute;
     top: 0;
     left: 0; }
-  .button:active:before {
+  .button:active:before, .button-secondary:active:before {
     top: -10%;
     height: 120%; }
-  .button[rel="external"]:after {
+  .button[rel="external"]:after, [rel="external"].button-secondary:after {
     display: none;
     content: none;
     margin-left: 0;
     margin-right: 0; }
 
-.button:focus {
+.button:focus, .button-secondary:focus {
   outline: 3px solid #ffbf47; }
 
-.button[disabled="disabled"] {
+.button[disabled="disabled"], [disabled="disabled"].button-secondary {
   background: #00823b; }
 
-.button[disabled="disabled"]:focus {
+.button[disabled="disabled"]:focus, [disabled="disabled"].button-secondary:focus {
   outline: none; }
 
 .button-get-started {
@@ -1081,3 +1081,37 @@ ul, ol {
   display: none;
   padding-top: 24px;
   clear: both; }
+
+.button-secondary {
+  background-color: #dee0e2;
+  -webkit-box-shadow: 0 2px 0 #b5babe;
+  -moz-box-shadow: 0 2px 0 #b5babe;
+  box-shadow: 0 2px 0 #b5babe;
+  color: #0b0c0c; }
+
+.form-label-bold {
+  font-family: “nta”, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 700;
+  text-transform: none;
+  margin-bottom: 0px;
+  margin-top: 25px; }
+
+.button.button-get-started, .button-get-started.button-secondary {
+  margin-top: 25px; }
+
+.form-label-bold-2 {
+  font-family: “nta”, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 700;
+  text-transform: none;
+  margin-bottom: 0px;
+  margin-top: 10px; }
+
+.button.button-get-started, .button-get-started.button-secondary {
+  margin-top: 25px; }
+
+.table-summary-title {
+  width: 45%; }
