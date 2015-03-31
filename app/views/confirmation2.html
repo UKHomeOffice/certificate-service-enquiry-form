@@ -5,6 +5,10 @@
 {{/head}}
 
 {{$content}}
+
+
+
+
 <main id="content" role="main">
 
   <a href="question6" class="no-back-link">Back</a>    <span class="example-back-link">Submit</span>
@@ -40,7 +44,7 @@
     </table>
   </section>
 
-  <section>
+  <section class="playback-container" name="certificate">
     <h3 class="heading-medium">Details of query</h3>
     <table class="table-summary">
       <tbody>
@@ -65,7 +69,10 @@
         </tr>
         <tr>
           <th class="table-summary-title" scope="row">How was order placed</th>
-          <td class="table-summary-content">Online (COL number TKY1234678K)</td>
+          <td class="table-summary-content">
+            <span class="playback-cell" data-playback="radio-order-how"></span>
+            (<span class="order-extra-name"></span> <span class="playback-cell" data-playback="account-number"></span>)
+          </td>
         </tr>
         <tr>
           <th class="table-summary-title" scope="row">Type of service</th>
@@ -92,8 +99,15 @@
 
 </main>
 
-
-
+<script type="text/javascript">
+var certData = JSON.parse(localStorage['certificate']);
+var orderMethod = certData['radio-order-how'];
+if (orderMethod == "online"){
+  $(".order-extra-name").html("COL number");
+} else {
+  $(".order-extra-name").html("account number");
+}
+</script>
 
 
 {{/content}}
